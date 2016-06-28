@@ -1,0 +1,13 @@
+<exmix = 'http://www.jahia.org/example-module/mix'>
+<exnt = 'http://www.jahia.org/example-module/nt'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<mix = 'http://www.jcp.org/jcr/mix/1.0'>
+
+[exmix:exampleContent] > jmix:droppableContent mixin
+
+[exnt:complexEditorialContent] > jnt:content, exmix:exampleContent, mix:title
+ - jcr:title (string) mandatory internationalized scoreboost=2.0
+ - description (string, richtext)
+ - image (weakreference, picker[type='image'])
+ - valueComingFromAChoiceListInitializer (string, choicelist[exampleChoiceList])
